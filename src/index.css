@@ -1,0 +1,152 @@
+:root {
+  /* Retro Pokédex / handheld screen (arcade) */
+  --bg-root: #0e0f18;
+  --bg-screen: #16182a;
+  --panel: #242338;
+  --panel-mid: #2e2c48;
+  --panel-bright: #3a3758;
+  --border: #4c4768;
+  --border-bright: #7d7399;
+  --text: #c8c2dc;
+  --text-h: #f5f2ff;
+  --text-muted: #8f87a8;
+  --accent: #ffcc00;
+  --accent-dim: #c9a000;
+  --accent-hot: #ff6b4a;
+  --accent-bg: rgba(255, 204, 0, 0.12);
+  --accent-border: #e6b800;
+  --danger: #ff8a8a;
+  --code-bg: var(--panel);
+  --shadow-deep: #07070c;
+  --glow-accent: rgba(255, 204, 0, 0.22);
+  --header-gradient-top: #1a1228;
+  --shell-header-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+  --on-accent: #07070c;
+  --text-shadow-heading: 2px 2px 0 var(--shadow-deep);
+
+  /* 8-bit stepped frames (raised / inset) */
+  --px-outer: #03030a;
+  --px-drop: var(--shadow-deep);
+  --px-face-tl: rgba(255, 255, 255, 0.14);
+  --px-face-br: rgba(0, 0, 0, 0.55);
+  --px-inset-top: rgba(0, 0, 0, 0.55);
+  --px-inset-bot: rgba(255, 255, 255, 0.06);
+
+  --font-ui: 'VT323', ui-monospace, monospace;
+  --font-badge: 'Press Start 2P', monospace;
+
+  color-scheme: dark;
+  font-family: var(--font-ui);
+  font-size: 22px;
+  line-height: 1.35;
+  color: var(--text);
+  background: var(--bg-root);
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Light “classic Dex” — cream paper, Pokédex red */
+html[data-theme='classic'] {
+  --bg-root: #d4cbb8;
+  --bg-screen: #f7f2e8;
+  --panel: #ebe3d4;
+  --panel-mid: #e0d6c4;
+  --panel-bright: #f3ece0;
+  --border: #7a6552;
+  --border-bright: #4a3d32;
+  --text: #3a3228;
+  --text-h: #1c1814;
+  --text-muted: #6b5e4f;
+  --accent: #c62828;
+  --accent-dim: #8e1e1e;
+  --accent-hot: #e53935;
+  --accent-bg: rgba(198, 40, 40, 0.12);
+  --accent-border: #a51f1f;
+  --danger: #b71c1c;
+  --code-bg: var(--panel);
+  --shadow-deep: #2c2419;
+  --glow-accent: rgba(198, 40, 40, 0.25);
+  --header-gradient-top: #efe8dc;
+  --shell-header-shadow: 0 4px 18px rgba(44, 36, 25, 0.18);
+  --on-accent: #fffefb;
+  --text-shadow-heading: 1px 1px 0 rgba(255, 255, 255, 0.45);
+
+  --px-outer: #14100c;
+  --px-drop: var(--shadow-deep);
+  --px-face-tl: rgba(255, 255, 255, 0.55);
+  --px-face-br: rgba(70, 55, 40, 0.28);
+  --px-inset-top: rgba(80, 60, 45, 0.35);
+  --px-inset-bot: rgba(255, 255, 255, 0.4);
+
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg-root);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--bg-root);
+}
+
+#root {
+  max-width: 100%;
+  min-height: 100svh;
+}
+
+h1,
+h2 {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  color: var(--text-h);
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.05;
+  margin: 0.5em 0;
+  text-shadow: var(--text-shadow-heading);
+}
+
+h2 {
+  font-size: 1.65rem;
+  line-height: 1.15;
+  margin: 0 0 0.4em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--text-h);
+}
+
+code {
+  font-family: var(--font-ui);
+  font-size: 0.95em;
+  padding: 0.1em 0.35em;
+  border: 2px solid var(--border);
+  border-radius: 0;
+  background: var(--panel);
+  color: var(--accent);
+  box-shadow:
+    0 0 0 2px var(--px-outer),
+    2px 2px 0 0 var(--px-drop),
+    inset 1px 1px 0 0 var(--px-face-tl),
+    inset -1px -1px 0 0 var(--px-face-br);
+}
