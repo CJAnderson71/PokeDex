@@ -6,12 +6,7 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/((?!api/)(?!assets/)(?!.*\\.).*)",
-      "destination": "/index.html"
-    }
-  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "headers": [
     {
       "source": "/pokedex-favicon.svg",
