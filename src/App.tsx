@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
 } from 'react-router-dom'
+import { FAVICON_URL } from './constants/favicon'
 import { ComparePage } from './pages/ComparePage'
 import { HomePage } from './pages/HomePage'
 import { PokemonDetailPage } from './pages/PokemonDetailPage'
@@ -40,7 +41,14 @@ export default function App() {
       <header className="shell-header">
         <div className="shell-header__top">
           <NavLink to="/" className="shell-header__brand" end>
-            <span className="shell-header__dot" aria-hidden="true" />
+            <img
+              className="shell-header__logo"
+              src={FAVICON_URL}
+              alt=""
+              width={32}
+              height={32}
+              decoding="async"
+            />
             <span className="shell-header__title">Kanto Pokédex</span>
           </NavLink>
           <div className="shell-header__tools">

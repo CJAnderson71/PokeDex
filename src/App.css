@@ -75,20 +75,19 @@
   color: var(--accent);
 }
 
-.shell-header__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    #ff8a8a,
-    var(--accent-hot) 45%,
-    #8b2010
-  );
-  box-shadow:
-    0 0 0 2px var(--shadow-deep),
-    0 0 12px var(--glow-accent);
+.shell-header__logo {
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 2px 0 var(--shadow-deep));
+}
+
+.shell-header__brand:hover .shell-header__logo {
+  filter: drop-shadow(0 2px 0 var(--shadow-deep)) brightness(1.06);
 }
 
 .shell-header__title {
