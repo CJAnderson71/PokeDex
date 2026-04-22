@@ -11,10 +11,9 @@ A React + TypeScript Pokédex that uses the [PokéAPI](https://pokeapi.co/). Bro
 
 ```bash
 npm install
-cp .env.example .env
 ```
 
-Edit `.env` if you need a different API base URL. Only variables prefixed with `VITE_` are available in the app.
+**Environment:** `.env` is **optional**. The app defaults to the public PokéAPI (`https://pokeapi.co/api/v2`). To override locally, copy `.env.example` to `.env` and set `VITE_POKEAPI_BASE_URL`. That file is gitignored on purpose—**Vercel and other hosts do not get a `.env` from Git**. For a custom URL in production, add `VITE_POKEAPI_BASE_URL` under the project’s **Environment Variables** on the host. Only variables prefixed with `VITE_` are exposed to the browser.
 
 ## Scripts
 
